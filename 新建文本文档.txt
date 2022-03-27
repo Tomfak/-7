@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int x,y;
+	char ch;
+	scanf("%d%d %c",&x,&y,&ch);//АэИзЈє3 4 +
+	if(ch!='+' && ch!='_' && ch!='*' && ch!='/')
+	{
+		printf("Invalid operator!");
+	}
+	else
+	{
+		if(ch=='+')	printf("%d",x+y);
+		if(ch=='_')	printf("%d",x-y);
+		if(ch=='*')	printf("%d",x*y);
+		if(ch=='/')	
+		{
+			if(y==0)
+			{
+				printf("Invalid operator!");
+			}
+			else
+			{
+				printf("%d",x/y);
+			}
+		}
+	}
+	printf("\n");
+	return 0;
+}
